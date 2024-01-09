@@ -90,8 +90,8 @@ doables(Eternals, Fluents, Doables) :-
 %% calculate the next position of the hunter given his direction
 next_pos(c{x:X,y:Y}, north, c{x:X,y:Y1}) :- Y1 #= Y + 1.
 next_pos(c{x:X,y:Y}, south, c{x:X,y:Y1}) :- Y1 #= Y - 1.
-next_pos(c{x:X,y:Y}, east, c{x:X1,y:Y}) :- X1 #= X - 1.
-next_pos(c{x:X,y:Y}, west, c{x:X1,y:Y}) :- X1 #= X + 1.
+next_pos(c{x:X,y:Y}, east, c{x:X1,y:Y}) :- X1 #= X + 1.
+next_pos(c{x:X,y:Y}, west, c{x:X1,y:Y}) :- X1 #= X - 1.
 
 turn_left(north, west).
 turn_left(west, south).
