@@ -1,3 +1,8 @@
+:- module(state, [
+    update_state/5,
+    derive_percepts/5
+]).
+
 :- use_module(ontology).
 
 update_state(Eternals, _, CurrentFluents, Action, NextFluents) :- 

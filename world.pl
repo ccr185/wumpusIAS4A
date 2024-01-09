@@ -1,4 +1,4 @@
-:- module(world,[]).
+:- module(world,[create_world/2]).
 
 :- use_module(library(clpfd)).
 :- use_module(library(yall)).

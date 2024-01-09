@@ -1,0 +1,148 @@
+server(started, 1704798419).
+server(stopped, 1704798419).
+server(started, 1704798598).
+server(stopped, 1704798598).
+server(started, 1704798703).
+server(stopped, 1704798703).
+server(started, 1704803623).
+server(stopped, 1704803623).
+server(started, 1704803768).
+server(stopped, 1704803768).
+server(started, 1704803778).
+server(stopped, 1704803778).
+server(started, 1704803857).
+server(stopped, 1704803857).
+server(started, 1704803868).
+server(started, 1704803892).
+server(stopped, 1704803892).
+server(started, 1704803900).
+server(stopped, 1704803900).
+server(started, 1704803936).
+server(started, 1704803956).
+server(stopped, 1704803956).
+server(started, 1704803976).
+server(stopped, 1704803979).
+server(started, 1704803983).
+server(stopped, 1704803985).
+server(started, 1704814942).
+/*Tue Jan  9 16:42:25 2024*/ request(1, 1704814945.828, [peer(ip(127,0,0,1)),method(get),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.034141000000000005, 2568, 200, ok).
+/*Tue Jan  9 16:43:35 2024*/ request(2, 1704815015.183, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(2, 0.0049640000000000005, 2568, 200, ok).
+server(stopped, 1704815102).
+server(started, 1704815195).
+server(started, 1704815433).
+server(stopped, 1704815433).
+server(started, 1704815441).
+server(stopped, 1704815441).
+server(started, 1704815463).
+server(started, 1704815465).
+server(stopped, 1704815465).
+server(started, 1704815507).
+server(stopped, 1704815507).
+server(started, 1704815531).
+/*Tue Jan  9 16:52:20 2024*/ request(1, 1704815540.209, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.090967, 2090, 500, error("Unknown procedure: cors_enable/2\nIn:\n  [20] cors_enable([protocol(http),...|...],[methods(...)])\n  [19] handle_default_request('<garbage_collected>') at /Users/ccr185/workspace/ESIEA/IAS4A/WumpusIAS4A/server.pl:28\n  [18] http_dispatch:call_action(user:handle_default_request,[protocol(http),...|...]) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_dispatch.pl:1041\n  [16] time:run_alarm_goal('<garbage_collected>','<garbage_collected>') at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/time.pl:147\n  [15] setup_call_catcher_cleanup(time:alarm(300,...,...,...),time:run_alarm_goal(...,...),_742,time:remove_alarm_notrace(...)) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/boot/init.pl:679\n  [13] time:call_with_time_limit(300,'<garbage_collected>') at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/time.pl:138\n  [12] http_dispatch:time_limit_action('<garbage_collected>','<garbage_collected>',[]) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_dispatch.pl:1020\n   [8] httpd_wrapper:call_handler('<garbage_collected>',1,'<garbage_collected>') at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:329\n   [7] catch(httpd_wrapper:call_handler(...,1,...),error(existence_error(procedure,...),context(...,_942)),httpd_wrapper:true) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/boot/init.pl:565\n   [6] httpd_wrapper:handler_with_output_to(http_unix_daemon:http_dispatch,1,[protocol(http),...|...],current_output,error(existence_error(procedure,...),context(...,_1026))) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:308\n   [5] httpd_wrapper:handler_with_output_to('<garbage_collected>',1,'<garbage_collected>',<stream>(0x6000010bc700),'<garbage_collected>') at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:318\n\nNote: some frames are missing due to last-call optimization.\nRe-run your program in debug mode (:- debug.) to get more detail.")).
+/*Tue Jan  9 16:53:40 2024*/ request(2, 1704815620.368, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(2, 0.015797, 1856, 500, error("Unknown procedure: cors_enable/2\nIn:\n  [20] cors_enable([protocol(http),...|...],[methods(...)])\n  [19] handle_default_request([protocol(http),...|...]) at /Users/ccr185/workspace/ESIEA/IAS4A/WumpusIAS4A/server.pl:28\n  [18] http_dispatch:call_action(user:handle_default_request,[protocol(http),...|...]) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_dispatch.pl:1041\n  [16] time:run_alarm_goal('$alarm'(105553132719712),http_dispatch:call_action(...,...,[])) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/time.pl:147\n  [15] setup_call_catcher_cleanup(time:alarm(300,...,...,...),time:run_alarm_goal(...,...),_786,time:remove_alarm_notrace(...)) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/boot/init.pl:679\n   [8] httpd_wrapper:call_handler(http_unix_daemon:http_dispatch,2,[protocol(http),...|...]) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:329\n   [7] catch(httpd_wrapper:call_handler(...,2,...),error(existence_error(procedure,...),context(...,_942)),httpd_wrapper:true) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/boot/init.pl:565\n   [6] httpd_wrapper:handler_with_output_to(http_unix_daemon:http_dispatch,2,[protocol(http),...|...],current_output,error(existence_error(procedure,...),context(...,_1026))) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:308\n   [5] httpd_wrapper:handler_with_output_to(http_unix_daemon:http_dispatch,2,[protocol(http),...|...],<stream>(0x6000010b9100),error(existence_error(procedure,...),context(...,_1104))) at /usr/local/Cellar/swi-prolog/9.0.4/libexec/lib/swipl/library/http/http_wrapper.pl:318\n\nNote: some frames are missing due to last-call optimization.\nRe-run your program in debug mode (:- debug.) to get more detail.")).
+server(stopped, 1704815691).
+server(started, 1704815715).
+server(stopped, 1704815761).
+server(started, 1704815763).
+/*Tue Jan  9 16:56:57 2024*/ request(1, 1704815817.982, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.032033, 1, 200, ok).
+server(stopped, 1704816228).
+server(started, 1704816230).
+/*Tue Jan  9 17:03:58 2024*/ request(1, 1704816238.726, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.026736, 0, 200, ok).
+/*Tue Jan  9 17:04:12 2024*/ request(2, 1704816252.922, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(2, 0.0011190000000000002, 0, 200, ok).
+server(started, 1704816359).
+server(stopped, 1704816359).
+server(started, 1704816360).
+server(stopped, 1704816360).
+server(stopped, 1704816369).
+server(started, 1704816371).
+/*Tue Jan  9 17:06:21 2024*/ request(1, 1704816381.226, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.029696999999999998, 0, 200, ok).
+server(stopped, 1704816387).
+server(started, 1704816399).
+server(started, 1704816433).
+server(stopped, 1704816433).
+server(started, 1704816439).
+server(stopped, 1704816439).
+server(started, 1704816441).
+server(stopped, 1704816441).
+server(started, 1704816443).
+server(stopped, 1704816443).
+server(started, 1704816460).
+/*Tue Jan  9 17:07:44 2024*/ request(1, 1704816464.036, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.031408, 0, 200, ok).
+/*Tue Jan  9 17:15:36 2024*/ request(2, 1704816936.843, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0'),access_control_request_method('PUT'),referer('http://localhost:9000/'),origin('http://localhost:9000'),connection('keep-alive'),sec_fetch_dest(empty),sec_fetch_mode(cors),sec_fetch_site('same-site')]).
+completed(2, 0.000905000000000003, 0, 200, ok).
+/*Tue Jan  9 17:15:55 2024*/ request(3, 1704816955.134, [peer(ip(127,0,0,1)),method(get),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0'),connection('keep-alive'),cookie(['G_ENABLED_IDPS'=google]),upgrade_insecure_requests('1'),sec_fetch_dest(document),sec_fetch_mode(navigate),sec_fetch_site('cross-site')]).
+completed(3, 0.007551000000000002, 2568, 200, ok).
+/*Tue Jan  9 17:16:26 2024*/ request(4, 1704816986.621, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(4, 0.0010710000000000025, 0, 200, ok).
+/*Tue Jan  9 17:16:43 2024*/ request(5, 1704817003.988, [peer(ip(127,0,0,1)),method(get),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),sec_ch_ua_platform('"macOS"'),upgrade_insecure_requests('1'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_site(none),sec_fetch_mode(navigate),sec_fetch_user('?1'),sec_fetch_dest(document),cookie(['G_ENABLED_IDPS'=google])]).
+completed(5, 0.007039000000000004, 2568, 200, ok).
+/*Tue Jan  9 17:16:44 2024*/ request(6, 1704817004.054, [peer(ip(127,0,0,1)),method(get),request_uri('/favicon.ico'),path('/favicon.ico'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),sec_fetch_site('same-origin'),sec_fetch_mode('no-cors'),sec_fetch_dest(image),referer('http://localhost:8080/default'),cookie(['G_ENABLED_IDPS'=google])]).
+completed(6, 0.0033460000000000018, 89, 404, error(404,'/favicon.ico')).
+server(started, 1704817244).
+server(stopped, 1704817244).
+server(started, 1704817265).
+server(stopped, 1704817265).
+server(started, 1704817266).
+server(stopped, 1704817266).
+server(started, 1704817266).
+server(stopped, 1704817266).
+server(stopped, 1704817271).
+server(started, 1704817274).
+/*Tue Jan  9 17:21:26 2024*/ request(1, 1704817286.070, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.029247000000000002, 0, 200, ok).
+server(started, 1704817365).
+server(stopped, 1704817365).
+server(started, 1704817366).
+server(stopped, 1704817366).
+server(stopped, 1704817369).
+server(started, 1704817371).
+server(stopped, 1704817567).
+server(started, 1704817568).
+/*Tue Jan  9 17:27:20 2024*/ request(1, 1704817640.637, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.027595, 65, 200, ok).
+server(stopped, 1704817711).
+server(started, 1704817712).
+/*Tue Jan  9 17:28:36 2024*/ request(1, 1704817716.805, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(1, 0.027174, 0, 200, ok).
+/*Tue Jan  9 17:28:36 2024*/ request(2, 1704817716.820, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(2, 0.006581, 2568, 200, ok).
+/*Tue Jan  9 17:29:08 2024*/ request(3, 1704817748.683, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(3, 0.0010250000000000003, 0, 200, ok).
+/*Tue Jan  9 17:29:08 2024*/ request(4, 1704817748.686, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(4, 0.006638000000000001, 2568, 200, ok).
+/*Tue Jan  9 17:29:21 2024*/ request(5, 1704817761.978, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(5, 0.0011139999999999995, 0, 200, ok).
+/*Tue Jan  9 17:29:21 2024*/ request(6, 1704817761.981, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(6, 0.006268999999999999, 2568, 200, ok).
+/*Tue Jan  9 17:29:22 2024*/ request(7, 1704817762.844, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(7, 0.006472000000000002, 2568, 200, ok).
+/*Tue Jan  9 17:29:23 2024*/ request(8, 1704817763.347, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(8, 0.006502000000000001, 2568, 200, ok).
+/*Tue Jan  9 17:29:23 2024*/ request(9, 1704817763.760, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(9, 0.005206000000000002, 2568, 200, ok).
+/*Tue Jan  9 17:29:47 2024*/ request(10, 1704817787.890, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(10, 0.0010420000000000013, 0, 200, ok).
+/*Tue Jan  9 17:29:47 2024*/ request(11, 1704817787.892, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(11, 0.005499999999999998, 2568, 200, ok).
+/*Tue Jan  9 17:55:25 2024*/ request(12, 1704819325.299, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(12, 0.0008930000000000049, 0, 200, ok).
+/*Tue Jan  9 17:55:25 2024*/ request(13, 1704819325.303, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(13, 0.004845999999999996, 2568, 200, ok).
+/*Tue Jan  9 17:57:25 2024*/ request(14, 1704819445.696, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(14, 0.0016169999999999934, 0, 200, ok).
+/*Tue Jan  9 17:57:25 2024*/ request(15, 1704819445.701, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(15, 0.006426000000000001, 2568, 200, ok).
+/*Tue Jan  9 17:57:33 2024*/ request(16, 1704819453.209, [peer(ip(127,0,0,1)),method(options),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),access_control_request_method('PUT'),origin('http://localhost:9000'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_fetch_mode(cors),sec_fetch_site('same-site'),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(16, 0.000902, 0, 200, ok).
+/*Tue Jan  9 17:57:33 2024*/ request(17, 1704819453.211, [peer(ip(127,0,0,1)),method(put),request_uri('/default'),path('/default'),http_version(1-1),host(localhost),port(8080),connection('keep-alive'),content_length(0),sec_ch_ua('"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"'),sec_ch_ua_mobile('?0'),user_agent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'),sec_ch_ua_platform('"macOS"'),origin('http://localhost:9000'),sec_fetch_site('same-site'),sec_fetch_mode(cors),sec_fetch_dest(empty),referer('http://localhost:9000/')]).
+completed(17, 0.005573999999999996, 2568, 200, ok).

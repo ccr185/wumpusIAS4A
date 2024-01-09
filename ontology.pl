@@ -1,57 +1,6 @@
-:- module(ontology, [wumpus_example/1, doables/3, effects/4, adjacent/3]).
+:- module(ontology, [doables/3, effects/4, adjacent/3]).
 :- use_module(library(clpfd)).
 
-
-wumpus_example(
-    world{ 
-        eternals:eternals{ 
-            cells:[
-                c{x:0,y:0},c{x:1,y:0},c{x:2,y:0},c{x:3,y:0},c{x:4,y:0},c{x:5,y:0},
-                c{x:0,y:1},c{x:1,y:1},c{x:2,y:1},c{x:3,y:1},c{x:4,y:1},c{x:5,y:1},
-                c{x:0,y:2},c{x:1,y:2},c{x:2,y:2},c{x:3,y:2},c{x:4,y:2},c{x:5,y:2},
-                c{x:0,y:3},c{x:1,y:3},c{x:2,y:3},c{x:3,y:3},c{x:4,y:3},c{x:5,y:3},
-                c{x:0,y:4},c{x:1,y:4},c{x:2,y:4},c{x:3,y:4},c{x:4,y:4},c{x:5,y:4},
-                c{x:0,y:5},c{x:1,y:5},c{x:2,y:5},c{x:3,y:5},c{x:4,y:5},c{x:5,y:5}
-            ],
-            eat_exit:eat{c:c{x:1,y:1},e:exit{id:exit}},
-            eat_pit:[eat{c:c{x:4,y:4},p:pit{id:pit3}},eat{c:c{x:3,y:3},p:pit{id:pit2}},eat{c:c{x:3,y:1},p:pit{id:pit1}}],
-            eat_walls:[ 
-                eat{c:c{x:5,y:5},w:wall{id:wall20}},
-                eat{c:c{x:4,y:5},w:wall{id:wall19}},
-                eat{c:c{x:3,y:5},w:wall{id:wall18}},
-                eat{c:c{x:2,y:5},w:wall{id:wall17}},
-                eat{c:c{x:1,y:5},w:wall{id:wall16}},
-                eat{c:c{x:0,y:5},w:wall{id:wall15}},
-                eat{c:c{x:5,y:4},w:wall{id:wall14}},
-                eat{c:c{x:0,y:4},w:wall{id:wall13}},
-                eat{c:c{x:5,y:3},w:wall{id:wall12}},
-                eat{c:c{x:0,y:3},w:wall{id:wall11}},
-                eat{c:c{x:5,y:2},w:wall{id:wall10}},
-                eat{c:c{x:0,y:2},w:wall{id:wall9}},
-                eat{c:c{x:5,y:1},w:wall{id:wall8}},
-                eat{c:c{x:0,y:1},w:wall{id:wall7}},
-                eat{c:c{x:5,y:0},w:wall{id:wall6}},
-                eat{c:c{x:4,y:0},w:wall{id:wall5}},
-                eat{c:c{x:3,y:0},w:wall{id:wall4}},
-                eat{c:c{x:2,y:0},w:wall{id:wall3}},
-                eat{c:c{x:1,y:0},w:wall{id:wall2}},
-                eat{c:c{x:0,y:0},w:wall{id:wall1}}
-            ],
-            eat_wumpus:[eat{c:c{x:1,y:3},w:wumpus{id:wumpus1}}]
-        },
-        fluents:fluents{ 
-            alive:[hunter{id:hunter},wumpus{id:wumpus1}],
-            dir:[dir{d:north,h:hunter{id:hunter}}],
-            fat_gold:[fat{c:c{x:2,y:3},g:gold{id:gold1}}],
-            fat_hunter:fat{c:c{x:1,y:1},h:hunter{id:hunter}},
-            has_arrow:[has{a:arrow{id:arrow1},h:hunter{id:hunter}}],
-            has_gold:[],
-            visited:[],
-            game_state:running,
-            score:0
-        }
-    }
-).
 
 adjacent(Eternals, Position, Adjacents) :-
     findall(
