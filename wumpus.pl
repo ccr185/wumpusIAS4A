@@ -8,3 +8,8 @@
 init(Request, Response) :-
     _{size:Size} :< Request,
     create_world(Size).
+
+%% handle sim request
+sim_step(Request, Response) :-
+    _{action:Action} :< Request,
+    sim(Action, Response).
