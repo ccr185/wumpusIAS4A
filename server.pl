@@ -7,13 +7,15 @@
 :- use_module(library(http/http_unix_daemon)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/http_error)).
-:- use_module(library(http/http_log), [http_log_stream/1]).
+:- use_module(library(http/http_log)).
 :- use_module(library(http/http_cors)).
 
 :- set_setting(http:logfile, 'httpd.log').
 :- set_setting(http:cors, [*]).
 
 :- cors_enable.
+
+:- debug.
 
 :- use_module(wumpus).
 
@@ -56,12 +58,18 @@ handle_sim_request(Request) :-
     format('Content-type: text/plain\r\n'),
     format('~n').
 handle_sim_request(Request) :-
-    http_read_json_dict(Request, RequestJSON),
+    http_read_json_dict(Request, RequestJSON, [value_string_as(atom)]),
     _{
         fluents: Fluents, eternals: Eternals, 
         previous_fluents:PreviousFluents,
         plan: Action
     } :< RequestJSON,
+    http_log_stream(Stream),
+    print_term(_{
+        fluents: Fluents, eternals: Eternals, 
+        previous_fluents:PreviousFluents,
+        plan: Action
+    }, [output(Stream),nl(true)]),
     sim_step(Eternals, Fluents, PreviousFluents, Action, NewFluents, Percepts),
     cors_enable,
     reply_json_dict(_{fluents: NewFluents, percepts: Percepts}).

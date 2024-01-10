@@ -4,8 +4,10 @@
 ]).
 
 :- use_module(ontology).
+:- use_module(library(http/http_log)).
 
 update_state(Eternals, _, CurrentFluents, Action, NextFluents) :- 
+    http_log("Calculating effects of ~w \n", [Action]),
     effects(Eternals, CurrentFluents, Action, NextFluents).
 
 derive_percepts(Eternals, PreviousFluents, CurrentFluents, Action, Percepts) :-

@@ -4,6 +4,9 @@
 %%% By: Camilo Correa Restrepo
 %%%
 
+:- use_module(library(http/http_log)).
+
+
 :- use_module(state).
 :- use_module(world).
 
@@ -63,5 +66,10 @@ init(Size, WorldDict) :-
     create_world(Size, WorldDict).
 %% handle sim request
 sim_step(Eternals, Fluents, PreviousFluents, Action, NextFluents, Percepts) :-
+    http_log('Updating State w/ action: ~w', [Action]),
     update_state(Eternals, PreviousFluents, Fluents, Action, NextFluents),
-    derive_percepts(Eternals, Fluents, NextFluents, Action, Percepts).
+    http_log_stream(Stream),
+    http_log('Calculated Next Fluents:', []),
+    print_term(NextFluents, [output(Stream),nl(true)]),
+    derive_percepts(Eternals, Fluents, NextFluents, Action, Percepts),
+    http_log('Calculated Next Percepts: ~w', [Percepts]).

@@ -1,6 +1,6 @@
 :- module(ontology, [doables/3, effects/4, adjacent/3]).
 :- use_module(library(clpfd)).
-
+:- use_module(library(http/http_log)).
 
 adjacent(Eternals, Position, Adjacents) :-
     findall(
@@ -67,6 +67,7 @@ fatal(Eternals, Fluents, Position) :-
 
 %% calculate the effects of an action
 effects(Eternals, Fluents, move, ResultingFluents) :-
+    http_log('Trying case 1 for Move \n', []),
     Fluents.fat_hunter = fat{c:OldPos, h:hunter{id:hunter}},
     % We know for now that there is only one hunter, otherwise we need to find which one
     % is being asked to move
@@ -77,6 +78,7 @@ effects(Eternals, Fluents, move, ResultingFluents) :-
     NewScore #= Fluents.score - 1,
     ResultingFluents = Fluents.put(score,NewScore).
 effects(Eternals, Fluents, move, ResultingFluents) :-
+    http_log('Trying case 2 for Move \n', []),
     Fluents.fat_hunter = fat{c:OldPos, h:hunter{id:hunter}},
     % We know for now that there is only one hunter, otherwise we need to find which one
     % is being asked to move
@@ -93,6 +95,7 @@ effects(Eternals, Fluents, move, ResultingFluents) :-
     NewScore #= Fluents.score - 1000,
     ResultingFluents = Fluents.put(fat_hunter/c,NewPos).put(alive,NewAlive).put(score,NewScore).
 effects(Eternals, Fluents, move, ResultingFluents) :-
+    http_log('Trying case 3 for Move \n', []),
     Fluents.fat_hunter = fat{c:OldPos, h:hunter{id:hunter}},
     % We know for now that there is only one hunter, otherwise we need to find which one
     % is being asked to move
@@ -158,7 +161,7 @@ effects(Eternals, Fluents, shoot, ResultingFluents) :-
     Fluents.dir = [dir{d:HunterDirection, h:hunter{id:hunter}}],
     in_direction(Fluents, Eternals, HunterPosition, HunterDirection, ShotWId, ShotWPos),
     selectchk(Arrow, Fluents.has_arrow, NewArrows),
-    format("Shot wumpus ~w at position ~w~n \n", [ShotWId, ShotWPos]),
+    http_log("Shot wumpus ~w at position ~w~n \n", [ShotWId, ShotWPos]),
     selectchk(wumpus{id:ShotWId}, Fluents.alive, NewAlive),
     NewScore #= Fluents.score - 10,
     ResultingFluents = Fluents.put(has_arrow, NewArrows).put(alive, NewAlive).put(score,NewScore).
@@ -170,7 +173,7 @@ effects(Eternals, Fluents, shoot, ResultingFluents) :-
     Fluents.dir = [dir{d:HunterDirection, h:hunter{id:hunter}}],
     \+ in_direction(Fluents, Eternals, HunterPosition, HunterDirection, _, _),
     selectchk(Arrow, Fluents.has_arrow, NewArrows),
-    format("Shot and didn't hit the wumpus \n", []),
+    http_log("Shot and didn't hit the wumpus \n", []),
     NewScore #= Fluents.score - 10,
     ResultingFluents = Fluents.put(has_arrow, NewArrows).put(score,NewScore).
 
