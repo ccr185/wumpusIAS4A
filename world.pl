@@ -89,8 +89,11 @@ init_eternals(Size, NPits, NWumpus, Eternals) :-
         (
             get_dict(eat_walls, WallsEternals, Walls),
             member(W, Walls), get_dict(c, W, Cell)
-        ) ; 
-        get_dict(eat_exit, WallsEternals, Cell)
+        ) ; (
+            % TODO: Make this better
+            % For now cheat and exclude 1,1
+            Cell = c{x:1,y:1}
+        )
     ), Cells, NonWallNonExitCells),
     % Assign the pits to the cells
     assign_pits(WallsEternals, NonWallNonExitCells, NPits, PitsEternals),

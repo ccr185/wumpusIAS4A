@@ -1,6 +1,7 @@
 :- module(state, [
     update_state/5,
-    derive_percepts/5
+    derive_percepts/5,
+    derive_base_percept/3
 ]).
 
 :- use_module(ontology).

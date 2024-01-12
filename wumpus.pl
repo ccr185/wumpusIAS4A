@@ -1,4 +1,4 @@
-:- module(wumpus, [sim_step/6, init/2, wumpus_example/1]).
+:- module(wumpus, [sim_step/6, init/3, wumpus_example/1]).
 %%% Wumpus world simulator
 %%% IAS 4A - ESIEA
 %%% By: Camilo Correa Restrepo
@@ -62,8 +62,10 @@ wumpus_example(
 ).
 
 %%% Entrypoint - Generate the world state
-init(Size, WorldDict) :-
-    create_world(Size, WorldDict).
+init(Size, WorldDict, InitPercepts) :-
+    create_world(Size, WorldDict),
+    derive_base_percept(WorldDict.eternals, WorldDict.fluents, InitPercepts).
+
 %% handle sim request
 sim_step(Eternals, Fluents, PreviousFluents, Action, NextFluents, Percepts) :-
     http_log('Updating State w/ action: ~w', [Action]),

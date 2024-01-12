@@ -93,7 +93,7 @@ effects(Eternals, Fluents, move, ResultingFluents) :-
     fatal(Eternals, Fluents, NewPos),
     selectchk(hunter{id:hunter}, Fluents.alive, NewAlive),
     NewScore #= Fluents.score - 1000,
-    ResultingFluents = Fluents.put(fat_hunter/c,NewPos).put(alive,NewAlive).put(score,NewScore).
+    ResultingFluents = Fluents.put(fat_hunter/c,NewPos).put(alive,NewAlive).put(score,NewScore).put(game_state,finished).
 effects(Eternals, Fluents, move, ResultingFluents) :-
     http_log('Trying case 3 for Move \n', []),
     Fluents.fat_hunter = fat{c:OldPos, h:hunter{id:hunter}},

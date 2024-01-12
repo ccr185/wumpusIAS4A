@@ -48,9 +48,9 @@ handle_init_request(Request) :-
 handle_init_request(Request) :-
     http_read_json_dict(Request, RequestJSON),
     _{size: Size} :< RequestJSON,
-    init(Size, WorldDict),
+    init(Size, WorldDict, InitPercetps),
     cors_enable,
-    reply_json_dict(WorldDict).
+    reply_json_dict(_{state:WorldDict, percepts:InitPercetps}).
 
 handle_sim_request(Request) :-
     option(method(options), Request), !,
