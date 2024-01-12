@@ -24,7 +24,11 @@
 run :- 
     http_log_stream(_),
     debug(http(_)),
-    http_daemon([fork(false), interactive(false), port(8080)]).
+    ( current_prolog_flag(windows, true) ->
+        http_server(http_dispatch, [port(8080)])
+        ;
+        http_daemon([fork(false), interactive(false), port(8080)])
+    ).
 
 :- http_handler(root(init), handle_init_request, []).
 :- http_handler(root(default), handle_default_request, []).
